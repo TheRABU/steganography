@@ -1,0 +1,29 @@
+1. file name.txt 
+>>>to show about the real extension of a file.
+
+2. strings filename.txt 
+>>> shows binary/metadata of any file.
+
+3.exiftool file.extension 
+>> details about file,even geo location from gps.
+
+4.exiftool -comment="hello, Meet me at 2.00PM new market " image.jpg
+>>>this will create a comment inside the image in metadata..
+
+5.steghide embed -cf imagename.jpg -ef secret.txt 
+>>>this will embade my secret txt file within the image. (if you give password then no password will use)
+
+6.steghide extract -sf imagename.jpg
+>>to extract anything from the image.
+
+7.zsteg --extract image.png  
+
+8.stegseek imagename.jpg /path-to-wordlist.txt 
+>>>bruteforce and extract from file
+
+9.binwalk Run: 
+ binwalk [imageName]
+● Extract:
+ binwalk -e [imageName]
+ binwalk --dd=".*" smile.png -e
+this is to see what else files embaded with a file and extract all ..
