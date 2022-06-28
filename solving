@@ -1,1 +1,34 @@
+## Solving my steganographies..
+1.	Firstly I checked the file type of the given problems in the stegs folder with the command “file filename.extension” so the command was
+ “ file super.jpg ”   then used the command and the original filetype was JPG.
+
+2.	Then “ stegseek super.jpg /usr/share/wordlists/rockyou.txt “ 
+3.	A new super.jpg.output created…then just simply “ cat super.jpg.output “ to see the flag.. 
+4.	flag{steg_ieee_cse} .
+
+  
+
+
+
+#### solving two images which makes no sense ..
+1.	Run the command “ gmic ciphered.png secret.png -blend xor “ 
+2.	And you have a image of a cat..
+ 
+
+
+### now the image called cute.png
+1.	using the tool binwalk… “  binwalk --dd=".*" cute.png -e  “ and this command a new file generated.
+2.	Now inside that new file we can see our flag.  apisc2020{Basic_Steganography} 
+ 
+
+
+
+##### the bird.jpg 
+1.	“ file bird.jpg “ it is a jpeg file…
+2.	“ steghide extract -sf bird.jpg “ 
+3.	Gets a crypto file 
+4.	Give execute permission to that file “ chmod +x crypto “
+5.	Get flag Flag {%s} .
+
+
 
